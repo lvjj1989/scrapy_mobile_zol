@@ -11,6 +11,9 @@ import re
 
 class MobileZil(scrapy.Spider):
     name = 'mobile_scrapy'
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+    }
     # start_urls = ['http://detail.zol.com.cn/cell_phone_index/subcate57_list_2.html',
     # 'http://detail.zol.com.cn/cell_phone_index/subcate57_list_2.html']
     start_urls = []
@@ -43,7 +46,7 @@ class MobileZil(scrapy.Spider):
 
             # print(stats)
 
-            yield scrapy.Request(url=phone_info_url, meta={"stats": stats}, callback=self.parse_phone_info, dont_filter=True)
+            yield scrapy.Request(url=phone_info_url, headers=MobileZil.headers, meta={"stats": stats}, callback=self.parse_phone_info, dont_filter=True)
 
     def parse_phone_info(self, response):
         stats = response.meta['stats']

@@ -6,6 +6,7 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymysql
 
+
 class ScrapyMobileZolPipeline(object):
     def __init__(self):
         # 建立连接
