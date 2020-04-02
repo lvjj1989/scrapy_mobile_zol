@@ -63,13 +63,13 @@
       <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scrapy_mobile_zol/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding>
-                <marker date="1585814397393" expanded="true" signature="677:1031" ph="insert into spider_moble_zol... " />
-                <marker date="1585814397393" expanded="true" signature="1693:1771" ph="SELECT * FRO... spider_moble_zol" />
-                <marker date="1585814397393" expanded="true" signature="2008:2086" ph="SELECT * FRO... spider_moble_zol" />
-                <marker date="1585814397393" expanded="true" signature="2274:2364" ph="UPDATE spide... " />
+                <marker date="1585818324390" expanded="true" signature="784:1138" ph="insert into spider_moble_zol... " />
+                <marker date="1585818324390" expanded="true" signature="1800:1878" ph="SELECT * FRO... spider_moble_zol" />
+                <marker date="1585818324390" expanded="true" signature="2115:2193" ph="SELECT * FRO... spider_moble_zol" />
+                <marker date="1585818324390" expanded="true" signature="2381:2471" ph="UPDATE spide... " />
               </folding>
             </state>
           </provider>
@@ -370,10 +370,10 @@
         <state relative-caret-position="450">
           <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding>
-            <marker date="1585814397393" expanded="true" signature="677:1031" ph="insert into spider_moble_zol... " />
-            <marker date="1585814397393" expanded="true" signature="1693:1771" ph="SELECT * FRO... spider_moble_zol" />
-            <marker date="1585814397393" expanded="true" signature="2008:2086" ph="SELECT * FRO... spider_moble_zol" />
-            <marker date="1585814397393" expanded="true" signature="2274:2364" ph="UPDATE spide... " />
+            <marker date="1585818324390" expanded="true" signature="784:1138" ph="insert into spider_moble_zol... " />
+            <marker date="1585818324390" expanded="true" signature="1800:1878" ph="SELECT * FRO... spider_moble_zol" />
+            <marker date="1585818324390" expanded="true" signature="2115:2193" ph="SELECT * FRO... spider_moble_zol" />
+            <marker date="1585818324390" expanded="true" signature="2381:2471" ph="UPDATE spide... " />
           </folding>
         </state>
       </provider>
@@ -433,10 +433,10 @@
         <state relative-caret-position="450">
           <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding>
-            <marker date="1585814397393" expanded="true" signature="677:1031" ph="insert into spider_moble_zol... " />
-            <marker date="1585814397393" expanded="true" signature="1693:1771" ph="SELECT * FRO... spider_moble_zol" />
-            <marker date="1585814397393" expanded="true" signature="2008:2086" ph="SELECT * FRO... spider_moble_zol" />
-            <marker date="1585814397393" expanded="true" signature="2274:2364" ph="UPDATE spide... " />
+            <marker date="1585818324390" expanded="true" signature="784:1138" ph="insert into spider_moble_zol... " />
+            <marker date="1585818324390" expanded="true" signature="1800:1878" ph="SELECT * FRO... spider_moble_zol" />
+            <marker date="1585818324390" expanded="true" signature="2115:2193" ph="SELECT * FRO... spider_moble_zol" />
+            <marker date="1585818324390" expanded="true" signature="2381:2471" ph="UPDATE spide... " />
           </folding>
         </state>
       </provider>
@@ -486,10 +486,10 @@
         <state relative-caret-position="162">
           <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="39" />
           <folding>
-            <marker date="1585814397393" expanded="true" signature="677:1031" ph="insert into spider_moble_zol... " />
-            <marker date="1585814397393" expanded="true" signature="1693:1771" ph="SELECT * FRO... spider_moble_zol" />
-            <marker date="1585814397393" expanded="true" signature="2008:2086" ph="SELECT * FRO... spider_moble_zol" />
-            <marker date="1585814397393" expanded="true" signature="2274:2364" ph="UPDATE spide... " />
+            <marker date="1585818324390" expanded="true" signature="784:1138" ph="insert into spider_moble_zol... " />
+            <marker date="1585818324390" expanded="true" signature="1800:1878" ph="SELECT * FRO... spider_moble_zol" />
+            <marker date="1585818324390" expanded="true" signature="2115:2193" ph="SELECT * FRO... spider_moble_zol" />
+            <marker date="1585818324390" expanded="true" signature="2381:2471" ph="UPDATE spide... " />
           </folding>
         </state>
       </provider>
@@ -572,13 +572,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapy_mobile_zol/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding>
-            <marker date="1585814397393" expanded="true" signature="677:1031" ph="insert into spider_moble_zol... " />
-            <marker date="1585814397393" expanded="true" signature="1693:1771" ph="SELECT * FRO... spider_moble_zol" />
-            <marker date="1585814397393" expanded="true" signature="2008:2086" ph="SELECT * FRO... spider_moble_zol" />
-            <marker date="1585814397393" expanded="true" signature="2274:2364" ph="UPDATE spide... " />
+            <marker date="1585818324390" expanded="true" signature="784:1138" ph="insert into spider_moble_zol... " />
+            <marker date="1585818324390" expanded="true" signature="1800:1878" ph="SELECT * FRO... spider_moble_zol" />
+            <marker date="1585818324390" expanded="true" signature="2115:2193" ph="SELECT * FRO... spider_moble_zol" />
+            <marker date="1585818324390" expanded="true" signature="2381:2471" ph="UPDATE spide... " />
           </folding>
         </state>
       </provider>

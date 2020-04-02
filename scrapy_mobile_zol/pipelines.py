@@ -11,16 +11,17 @@ class ScrapyMobileZolPipeline(object):
     def __init__(self):
         # 建立连接
         self.conn = pymysql.connect(
-            host='',
+            host='127.0.0.1',
             port=3306,
-            user='root',
-            password='123456',
+            user='lvjj',
+            password='a1478520B',
             db='mysql_lvjj',
             charset='utf8'
         )
         # 创建游标
         self.cursor = self.conn.cursor()
 
+    # def data_insert(self, phone_name, phone_price, phone_info_url, phone_parameter_url, phone_x, phone_y, phone_size, phone_info, phone_brand):
     def data_insert(self, **kwargs):
         insert_sql = """
                 insert into spider_moble_zol(
@@ -87,10 +88,8 @@ class ScrapyMobileZolPipeline(object):
                 #                  phone_info_url=item['phone_info_url'], phone_parameter_url=item['phone_parameter_url'],
                 #                  phone_x=item['phone_x'], phone_y=item['phone_y'], phone_size=item['phone_size'],
                 #                  phone_info=item['phone_info'], phone_brand=item['phone_brand'])
-                self.data_insert(**(dict(item)))
-        # self.cursor.execute(insert_sql)
-        # # 提交，不进行提交无法保存到数据库
-        # self.conn.commit()
+                self.data_insert(dict(item))
+        #
 
         return item
 
