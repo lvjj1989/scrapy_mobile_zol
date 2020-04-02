@@ -13,16 +13,16 @@ class ScrapyMobileZolPipeline(object):
         self.conn = pymysql.connect(
             host='127.0.0.1',
             port=3306,
-            user='root',
+            user='admin_ljj',
             password='123456',
-            db='db',
+            db='mysql_lvjj',
             charset='utf8'
         )
         # 创建游标
         self.cursor = self.conn.cursor()
 
-    def data_insert(self, phone_name, phone_price, phone_info_url, phone_parameter_url, phone_x, phone_y, phone_size,
-                    phone_info, phone_brand):
+    # def data_insert(self, phone_name, phone_price, phone_info_url, phone_parameter_url, phone_x, phone_y, phone_size, phone_info, phone_brand):
+    def data_insert(self, **kwargs):
         insert_sql = """
                 insert into spider_moble_zol(
                 phone_name,
@@ -35,15 +35,15 @@ class ScrapyMobileZolPipeline(object):
                 phone_info,
                 phone_brand) 
                 VALUES("{}","{}","{}","{}",{},{},{},"{}","{}")
-                """.format(phone_name,
-                           phone_price,
-                           phone_info_url,
-                           phone_parameter_url,
-                           phone_x,
-                           phone_y,
-                           phone_size,
-                           phone_info,
-                           phone_brand)
+                """.format(kwargs['phone_name'],
+                           kwargs['phone_price'],
+                           kwargs['phone_info_url'],
+                           kwargs['phone_parameter_url'],
+                           kwargs['phone_x'],
+                           kwargs['phone_y'],
+                           kwargs['phone_size'],
+                           kwargs['phone_info'],
+                           kwargs['phone_brand'])
         # 执行插入数据到数据库操作
         # print(insert_sql)
         self.cursor.execute(insert_sql)
@@ -84,10 +84,11 @@ class ScrapyMobileZolPipeline(object):
                 print("增量数据")
                 # print(res_data_select)
                 # 增量数据
-                self.data_insert(phone_name=item['phone_name'], phone_price=item['phone_price'],
-                                 phone_info_url=item['phone_info_url'], phone_parameter_url=item['phone_parameter_url'],
-                                 phone_x=item['phone_x'], phone_y=item['phone_y'], phone_size=item['phone_size'],
-                                 phone_info=item['phone_info'], phone_brand=item['phone_brand'])
+                # self.data_insert(phone_name=item['phone_name'], phone_price=item['phone_price'],
+                #                  phone_info_url=item['phone_info_url'], phone_parameter_url=item['phone_parameter_url'],
+                #                  phone_x=item['phone_x'], phone_y=item['phone_y'], phone_size=item['phone_size'],
+                #                  phone_info=item['phone_info'], phone_brand=item['phone_brand'])
+                self.data_insert(**(dict(item)))
         # self.cursor.execute(insert_sql)
         # # 提交，不进行提交无法保存到数据库
         # self.conn.commit()
