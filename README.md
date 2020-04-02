@@ -7,8 +7,11 @@
 
 建表sql：
     ```
+
         SET FOREIGN_KEY_CHECKS = 0;
+
         DROP TABLE IF EXISTS  `spider_moble_zol`;
+
         CREATE TABLE `spider_moble_zol` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
           `phone_name` varchar(32) DEFAULT '' COMMENT '手机名称',
@@ -26,7 +29,6 @@
         ) ENGINE=InnoDB AUTO_INCREMENT=901 DEFAULT CHARSET=utf8;
 
         SET FOREIGN_KEY_CHECKS = 1;
-
 
     ```
 执行命令：`scrapy runspider scrapy_mobile_zol/spiders/mobile_zol_spider.py`
