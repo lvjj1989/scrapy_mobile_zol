@@ -7,7 +7,6 @@
 
 建表sql：
 
-    ```
 
         SET FOREIGN_KEY_CHECKS = 0;
 
@@ -31,5 +30,4 @@
 
         SET FOREIGN_KEY_CHECKS = 1;
 
-    ```
 执行命令：`scrapy runspider scrapy_mobile_zol/spiders/mobile_zol_spider.py`
