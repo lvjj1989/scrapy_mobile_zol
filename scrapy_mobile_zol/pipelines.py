@@ -11,9 +11,9 @@ class ScrapyMobileZolPipeline(object):
     def __init__(self):
         # 建立连接
         self.conn = pymysql.connect(
-            host='127.0.0.1',
+            host='',
             port=3306,
-            user='admin_ljj',
+            user='root',
             password='123456',
             db='mysql_lvjj',
             charset='utf8'
@@ -21,7 +21,6 @@ class ScrapyMobileZolPipeline(object):
         # 创建游标
         self.cursor = self.conn.cursor()
 
-    # def data_insert(self, phone_name, phone_price, phone_info_url, phone_parameter_url, phone_x, phone_y, phone_size, phone_info, phone_brand):
     def data_insert(self, **kwargs):
         insert_sql = """
                 insert into spider_moble_zol(
