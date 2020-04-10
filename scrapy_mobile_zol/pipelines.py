@@ -14,10 +14,11 @@ class ScrapyMobileZolPipeline(object):
             host='127.0.0.1',
             port=3306,
             user='lvjj',
-            password='a1478520B',
+            password='123456',
             db='mysql_lvjj',
             charset='utf8'
         )
+
         # 创建游标
         self.cursor = self.conn.cursor()
 
@@ -64,7 +65,7 @@ class ScrapyMobileZolPipeline(object):
         res = self.cursor.fetchone()
         # print("res = ", res)
         if res:
-            uplate_sql = "UPDATE spider_moble_zol SET phone_price={} WHERE phone_info_url = '{}' and phone_price = 0".format(phone_price)
+            uplate_sql = "UPDATE spider_moble_zol SET phone_price={} WHERE phone_info_url = '{}' and phone_price = 0".format(phone_price, phone_info_url)
 
             # print(uplate_sql)
             self.cursor.execute(uplate_sql)
@@ -75,7 +76,7 @@ class ScrapyMobileZolPipeline(object):
 
     def process_item(self, item, spider):
 
-        print(dict(item))
+        # print(dict(item))
         res_data_select = self.data_select(item['phone_info_url'])
         if self.data_update_price(phone_info_url=item['phone_info_url'], phone_price=item['phone_price']):
             print('更新价格')
@@ -89,7 +90,9 @@ class ScrapyMobileZolPipeline(object):
                 #                  phone_x=item['phone_x'], phone_y=item['phone_y'], phone_size=item['phone_size'],
                 #                  phone_info=item['phone_info'], phone_brand=item['phone_brand'])
                 self.data_insert(dict(item))
-        #
+        # self.cursor.execute(insert_sql)
+        # # 提交，不进行提交无法保存到数据库
+        # self.conn.commit()
 
         return item
 

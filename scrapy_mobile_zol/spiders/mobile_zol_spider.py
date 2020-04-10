@@ -17,7 +17,7 @@ class MobileZil(scrapy.Spider):
     # start_urls = ['http://detail.zol.com.cn/cell_phone_index/subcate57_list_2.html',
     # 'http://detail.zol.com.cn/cell_phone_index/subcate57_list_2.html']
     start_urls = []
-    for i in range(1, 20):
+    for i in range(1, 2):
         start_url = 'http://detail.zol.com.cn/cell_phone_index/subcate57_0_list_1_0_1_2_0_{}.html'.format(i)
         start_urls.append(start_url)
 
@@ -89,7 +89,7 @@ class MobileZil(scrapy.Spider):
         # print(phone_resolution)
         stats['phone_x'] = int(re.search("(\d+)x(\d+).+", phone_resolution).group(2))
         stats['phone_y'] = int(re.search("(\d+)x(\d+).+", phone_resolution).group(1))
-        print(stats)
+        # print(stats)
         yield stats
 
 
