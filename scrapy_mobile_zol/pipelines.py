@@ -10,15 +10,30 @@ import pymysql
 class ScrapyMobileZolPipeline(object):
     def __init__(self):
         # 建立连接
+        # self.conn = pymysql.connect(
+        #     host='127.0.0.1',
+        #     port=3306,
+        #     user='lvjj',
+        #     password='123456',
+        #     db='mysql_lvjj',
+        #     charset='utf8'
+        # )
         self.conn = pymysql.connect(
-            host='127.0.0.1',
+            host='rdsej341u9483k397ae5.mysql.rds.aliyuncs.com',
             port=3306,
             user='lvjj',
-            password='123456',
+            password='a1478520B',
             db='mysql_lvjj',
             charset='utf8'
         )
-
+        # self.conn = pymysql.connect(
+        #     host='test.dmp.mysqlm.jhops.club',
+        #     port=3309,
+        #     user='root',
+        #     password='',
+        #     db='qa_data_mock',
+        #     charset='utf8'
+        # )
         # 创建游标
         self.cursor = self.conn.cursor()
 
@@ -85,11 +100,11 @@ class ScrapyMobileZolPipeline(object):
                 print("增量数据")
                 # print(res_data_select)
                 # 增量数据
-                # self.data_insert(phone_name=item['phone_name'], phone_price=item['phone_price'],
-                #                  phone_info_url=item['phone_info_url'], phone_parameter_url=item['phone_parameter_url'],
-                #                  phone_x=item['phone_x'], phone_y=item['phone_y'], phone_size=item['phone_size'],
-                #                  phone_info=item['phone_info'], phone_brand=item['phone_brand'])
-                self.data_insert(dict(item))
+                self.data_insert(phone_name=item['phone_name'], phone_price=item['phone_price'],
+                                 phone_info_url=item['phone_info_url'], phone_parameter_url=item['phone_parameter_url'],
+                                 phone_x=item['phone_x'], phone_y=item['phone_y'], phone_size=item['phone_size'],
+                                 phone_info=item['phone_info'], phone_brand=item['phone_brand'])
+                # self.data_insert(dict(item))
         # self.cursor.execute(insert_sql)
         # # 提交，不进行提交无法保存到数据库
         # self.conn.commit()
