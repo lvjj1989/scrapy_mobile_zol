@@ -10,30 +10,15 @@ import pymysql
 class ScrapyMobileZolPipeline(object):
     def __init__(self):
         # 建立连接
-        # self.conn = pymysql.connect(
-        #     host='127.0.0.1',
-        #     port=3306,
-        #     user='lvjj',
-        #     password='123456',
-        #     db='mysql_lvjj',
-        #     charset='utf8'
-        # )
         self.conn = pymysql.connect(
-            host='rdsej341u9483k397ae5.mysql.rds.aliyuncs.com',
+            host='127.0.0.1',
             port=3306,
             user='lvjj',
-            password='a1478520B',
+            password='123456',
             db='mysql_lvjj',
             charset='utf8'
         )
-        # self.conn = pymysql.connect(
-        #     host='test.dmp.mysqlm.jhops.club',
-        #     port=3309,
-        #     user='root',
-        #     password='',
-        #     db='qa_data_mock',
-        #     charset='utf8'
-        # )
+
         # 创建游标
         self.cursor = self.conn.cursor()
 
